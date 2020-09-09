@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Tudo sobre Html</title>
+      <link rel="stylesheet" href="_css/estilo.css"/>
+	  <link rel="stylesheet" href="_css/specs.css"/>
+</head>
+<script>
+function mudaIcone(foto){document.getElementById("icone").src=foto;}
+  
+</script>
+
+<body>
+     <div id="interface">
+
+  <header id="cabecalho">
+   <hgroup>
+   <img src="_imagens/glass-logo-peq.jpg" />
+   <h1 style="font-weight:bold;">Google Glass</h1><!--tag para dxeichar em negrito as palavras-->
+   <h2>A revolução do Google está chegando</h2>
+  </hgroup>
+  
+<img id="icone" src="_imagens/glass-oculos-preto-med.png"/>
+
+<nav id="Menu">
+    <h1>Menu</h1>
+   
+   <ul>
+         <li onmouseover="mudaIcone('_imagens/home.png')" onmouseout="mudaIcone('_imagens/especificacoes.png')"><a href="index.html">Home</a></li>
+         <li onmouseover="mudaIcone('_imagens/especificacoes.png')" onmouseout="mudaIcone('_imagens/especificacoes.png')"><a href="specs.html">Especificações</a></li>
+         <li onmouseover="mudaIcone('_imagens/fotos.png')" onmouseout="mudaIcone('_imagens/especificacoes.png')"><a href="fotos.html">Fotos</a></li>
+         <li onmouseover="mudaIcone('_imagens/multimidia.png')" onmouseout="mudaIcone('_imagens/especificacoes.png')"><a href="multimidia.html">Mídia</a></li>
+         <li onmouseover="mudaIcone('_imagens/contato.png')" onmouseout="mudaIcone('_imagens/especificacoes.png')"><a href="fale-conosco.html">fale conosco</a></li>
+   </ul>
+</nav>
+   </header>
+<section id="conteudo">
+<h3>Glass > Especificações</h3>
+<h1>Raio-X no Google Glass</h1>
+<h3 class="h3">por Gustavo Guanabara</h3>
+<h4>Atualizado em 01/Maio/2013</h4>
+&nbsp;
+
+<p>Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.</p>
+
+<img id="imagem" src="_imagens/glass-esquema-marcado.jpg" usemap="useMapa">
+<map name="useMapa">
+<area shape="poly" coords="183,219,267,209,267,242,186,256" href="google-glass.html#tela" target="janela">
+<area shape="circle" coords="157,243,12" href="google-glass.html#camera" target="janela"/>
+   <area shape="circle" coords="77,51,12" href="google-glass.html#sensores" target="janela"/><!--no target coloquei o nome do iframe para fzr a ligação entre eles-->
+   <area shape="poly" coords="30,147,82,218,81,247,21,171" href="google-glass.html#bateria" target="janela">
+</map>
+</map>
+
+<iframe src="google-glass.html" name="janela" id="frame-spec"></iframe><!--É necessario colocar o nome por que vai se junta ao mapa de imagens-->
+
+<footer id="rodape">
+<p>Copyright 2013 - by Simeone Aquino de Holanda<br/>
+<a href=""><alt="google-glass">Facebook</title></a> | <a href="">Twitter</a></p>
+
+</footer>
+</div>
+</body>
+</html>

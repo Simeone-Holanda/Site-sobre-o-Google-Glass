@@ -1,0 +1,39 @@
+@chasert"UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Bubblegum+Sans|Slabo+27px');
+/*podia ter configurado copiando do arquivo estilo.css mais fiz manualmente*/
+h3 {font-family:'Bubblegum Sans', cursive;
+    font-family: 'Slabo 27px', serif;
+	font-weight:bolder;
+	color:#cecece;
+	margin-left:20px;}
+	
+h3.h3 {font-family:'Bubblegum Sans', cursive;
+    font-family: 'Slabo 27px', serif;
+	font-weight:bolder;
+	color:#cecece;
+	font-size:10pt;
+	margin-top:-27px;
+	margin-left:20px;}
+h1{ font-family: 'Bubblegum Sans', cursive;
+    color:#606060;   
+    margin-left:20px;	}
+h4 { font-size:8pt;
+     text-align:right;
+     margin-top:0px;
+     margin-left:20px;
+     color:#888888     }
+	 
+	 
+p  {margin-left:20px;
+    margin-right:30px;}
+
+img#imagem{margin-left:50px;}
+
+/*----------------------------------------------------------------------------*/
+/*trabalhand com iframes*/
+iframe#frame-spec {width:500px;
+                   height:280px;
+				   border:none;
+				 				   }
+/*-----------------------------------*/
+

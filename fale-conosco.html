@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Tudo sobre Html</title>
+      <link rel="stylesheet" href="_css/estilo.css"/>
+	  <link rel="stylesheet" href="_css/form.css"/>
+</head>
+<script>
+function mudaIcone(foto){document.getElementById("icone").src=foto;}
+</script>
+
+<script>
+function calc_total() { var qtd= parseInt(document.getElementById("cQtd").value);
+                       tot = qtd * 1500;
+					   document.getElementById('cTot').value = tot;}
+</script>  
+
+
+<body>
+     <div id="interface">
+
+  <header id="cabecalho">
+   <hgroup>
+   <img src="_imagens/glass-logo-peq.jpg" />
+   <h1 style="font-weight:bold;">Google Glass</h1><!--tag para dxeichar em negrito as palavras-->
+   <h2>A revolução do Google está chegando</h2>
+  </hgroup>
+  
+<img id="icone" src="_imagens/glass-oculos-preto-med.png"/>
+
+<nav id="Menu">
+    <h1>Menu</h1>
+   
+   <ul>
+         <li onmouseover="mudaIcone('_imagens/home.png')" onmouseout="mudaIcone('_imagens/contato.png')"><a href="index.html">Home</a></li>
+         <li onmouseover="mudaIcone('_imagens/especificacoes.png')" onmouseout="mudaIcone('_imagens/contato.png')"><a href="specs.html">Especificações</a></li>
+         <li onmouseover="mudaIcone('_imagens/fotos.png')" onmouseout="mudaIcone('_imagens//contato.png')"><a href="fotos.html">Fotos</a></li>
+         <li onmouseover="mudaIcone('_imagens/multimidia.png')" onmouseout="mudaIcone('_imagens/contato.png')"><a href="multimidia.html">Mídia</a></li>
+         <li onmouseover="mudaIcone('_imagens/contato.png')" onmouseout="mudaIcone('_imagens/contato.png')"><a href="fale-conosco.html">fale conosco</a></li>
+   </ul>
+</nav>
+   </header>
+   <section id="corpo-full">
+   <article id="noticia">
+   <header id="cabecalho-artigo">
+ <hgroup>
+<h3>Fale Conosco > Contato</h3>
+<h1>Formulário de Contato</h1>
+<h3>por Gustavo Guanabara</h3>
+<h3 class="h3">Atualizado em 01/Maio/2013</h3>
+</hgroup>
+ </header>
+
+<form method="post" id="fcontato" action="mailto:simeone.10s10@gmail.com" oninput="calc_total();">
+<fieldset id="usuario">
+<legend>Identificação do Usuário</legend>
+   <p> <LABEL FOR="cname">Nome:</label><input type="text" name="tname" id="cname" size="20" maxlength="30" placeholder="Nome completo"></p>
+   <p> <LABEL FOR="csenha">Senha:<input type="password" name="tsenha" id="csenha" size="8" maxlength="8" placeholder="8 dígito"></p>
+   <p> <LABEL FOR="cmail">E-mail:<input type="email" size="16" name="tmail" id="cmail" maxlength="30" placeholder="Separe por vírgulas"></p>
+<fieldset id="sexo">Sexo:
+ <input type="radio" name="tsexo" id="cmasc" ><LABEL FOR="cmasc"> Masculino</LABEL><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="radio" name="tsexo" id="cfem"><LABEL FOR="cfem">Feminino</LABEL>
+		</fieldset>
+    <p><LABEL FOR="cdate">Data de Nascimento:</LABEL><input type="DATE" size="20" name="tdate" id="cdate" maxlength="30"</p>
+</fieldset>
+
+<fieldset id="endereco">
+ <legend>Endereço do Usuário</legend>
+    <p> <LABEL FOR="crua">Logradouro:</LABEL>
+	<input type="text" name="trua" id="crua" size="10" maxlength="80" placeholder="Rua,Av,Trav, ..."> </p>
+	
+    <p><LABEL FOR="cnume"> Número:</LABEL>
+	<input type="number" name="tnume" id="cnume" min="0" max="999999" placeholder="00" ></p>
+	
+    <p><LABEL FOR="cest"> Estado:</LABEL>
+	<select name="test" id="cest" placeholder="Estado" >
+	
+	    <optgroup label="Sudeste">
+		   <option value="RJ">Rio de Janeiro</option><!--o value não é preciso é a apenas a forma como irei receber o arquivo -->
+		   <option value="SP">São Paulo</option></p>
+		   
+		<optgroup label="Norte">
+		   <option>Acre</option>
+		   <option>Pará</option>
+		   <!--coloca quantos estados qser-->
+		   </select>
+		   <br/>
+		   
+    <p><LABEL FOR="ctext">Cidade:</LABEL>
+	   <input type="text" name="ttext" id="ctext" size="10" maxlength="30" placeholder="Cidade">
+           
+</fieldset>
+
+<fieldset id="msg" >
+<legend>Mensagem do Usuário</legend>
+   <p><LABEL FOR="cgrau"> Grau de Urgência: Min</LABEL><input type="range" name="tgrau" id="cgrau" min="0" max="10" step="2">Max</p>
+   <p><LABEL FOR="cmen" >Mensagem:</LABEL> <textarea name="tmen" id="cman" cols="45" rows="5" placeholder="Deixe sua mensagem"></textarea></p><!--não esquecer de fechar o textarea pois se n fecahr nao vai pegar -->
+   
+</fieldset>
+
+<fieldset id="compra">
+<legend>Quero um Google Glass</legend>
+   <p><input type="checkbox" name="tgos" id="cgos" checked />
+   <label for="cgos">Gostaria de adquirir um Google Glass quando disponível</label></p>
+   <p> <label for="ccor">Cor:<input type="color" name="tcor" id="ccor" value="#0000ff"></label></p>
+   <p> <label for="cQtd"> Quantidade:<input type="number" name="tQtd" id="cQtd" min="0" max="5" value="0"></p>
+   <p> <label for="cTot">Preço Total:<input type="text" name="tTot" id="cTot"  placeholder="Total a ser pago"></label> R$</p>
+</fieldset>
+
+<input type="image" name="tbot" src="_imagens/botao-enviar.png">
+</form>
+
+
+<footer id="rodape">
+<p>Copyright 2013 - by Simeone Aquino de Holanda<br/>
+<a href=""><alt="google-glass">Facebook</title></a> | <a href="">Twitter</a></p>
+
+</footer>
+</div>
+</body>
+</html>
